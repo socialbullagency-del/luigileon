@@ -1,0 +1,2141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Luigi Leon — Mr. Prosperity | Entrepreneur · Speaker · Visionary</title>
+<meta name="description" content="Luigi Leon, known as Mr. Prosperity, is a seasoned entrepreneur, dynamic public speaker, and visionary leader with 20+ years across real estate, solar energy, luxury automotive, and more." />
+<meta name="keywords" content="Luigi Leon, Mr Prosperity, entrepreneur speaker, real estate investor, PG Lux, motivational speaker, business visionary" />
+<link rel="canonical" href="https://www.luigileon.com/" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Luigi Leon — Mr. Prosperity" />
+<meta property="og:description" content="Entrepreneur. Speaker. Visionary. 20+ years building empires across real estate, solar energy, luxury automotive and more." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.luigileon.com/" />
+
+<!-- Fonts: Oswald (modern display) + Inter (clean body) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap">
+
+<!-- Schema: Person -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Luigi Leon",
+  "alternateName": "Mr. Prosperity",
+  "url": "https://www.luigileon.com",
+  "sameAs": ["https://www.instagram.com/luigileonofficial/", "https://pgluxautoboutique.com/"],
+  "jobTitle": "Entrepreneur, Public Speaker",
+  "description": "Seasoned entrepreneur and dynamic public speaker with over two decades of experience across real estate, solar energy, luxury automotive, and architecture.",
+  "knowsAbout": ["Real Estate", "Solar Energy", "Luxury Automotive", "Faith", "Law of Attraction", "Branding", "Sales"]
+}
+</script>
+
+<style>
+/* ============================================================
+   LUIGI LEON — Personal Brand Design System
+   Palette: Black #000 | Gold #C9A84C | White #FFF
+   Display: Oswald | Body: Inter
+   ============================================================ */
+
+/* ── Google Font Display Override ─────────────────────────── */
+@font-face { font-family: 'Oswald'; font-display: swap; src: local('Oswald'); }
+@font-face { font-family: 'Inter'; font-display: swap; src: local('Inter'); }
+
+/* ── Design Tokens ─────────────────────────────────────────── */
+:root {
+  --black:        #000000;
+  --black2:       #0A0A0A;
+  --black3:       #111111;
+  --card:         #141414;
+  --card2:        #1C1C1C;
+  --gold:         #C9A84C;
+  --gold-light:   #E8D5A3;
+  --gold-shine:   #F5E6B8;
+  --gold-dark:    #A67C00;
+  --gold-border:  rgba(201,168,76,0.2);
+  --gold-border-h:rgba(201,168,76,0.6);
+  --white:        #FFFFFF;
+  --gray:         #888888;
+  --gray2:        #555555;
+  --border:       rgba(255,255,255,0.06);
+
+  --ff-display:   'Oswald', sans-serif;
+  --ff-body:      'Inter', -apple-system, sans-serif;
+
+  --container:    1320px;
+  --radius:       10px;
+  --radius-lg:    18px;
+  --t:            0.4s ease;
+  --t-fast:       0.2s ease;
+}
+
+/* ── Reset ─────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: var(--ff-body);
+  background: var(--black);
+  color: var(--white);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+button { font-family: inherit; cursor: pointer; }
+
+/* ── Container ─────────────────────────────────────────────── */
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 clamp(24px, 4vw, 60px);
+}
+
+/* ── Section Padding ───────────────────────────────────────── */
+.section { padding: clamp(80px, 10vw, 140px) 0; }
+.section--tight { padding: clamp(60px, 7vw, 100px) 0; }
+
+/* ── Gold Shimmer Animation ────────────────────────────────── */
+@keyframes goldShimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.94); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes scrollBounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(8px); }
+}
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@keyframes lineGrow {
+  from { width: 0; }
+  to   { width: 60px; }
+}
+@keyframes pulse-gold {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(201,168,76,0); }
+  50%       { box-shadow: 0 0 24px 4px rgba(201,168,76,0.25); }
+}
+
+/* ── Scroll Reveal ─────────────────────────────────────────── */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.75s ease, transform 0.75s ease;
+}
+[data-reveal="left"]  { transform: translateX(-32px); }
+[data-reveal="right"] { transform: translateX(32px); }
+[data-reveal="scale"] { transform: scale(0.94); }
+[data-reveal].is-visible { opacity: 1; transform: none; }
+[data-delay="1"] { transition-delay: 0.1s; }
+[data-delay="2"] { transition-delay: 0.2s; }
+[data-delay="3"] { transition-delay: 0.3s; }
+[data-delay="4"] { transition-delay: 0.4s; }
+[data-delay="5"] { transition-delay: 0.5s; }
+
+/* ── Gold Text Gradient ────────────────────────────────────── */
+.gold-text {
+  background: linear-gradient(90deg, var(--gold-dark) 0%, var(--gold-shine) 40%, var(--gold) 60%, var(--gold-light) 80%, var(--gold-dark) 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.gold-text--animate {
+  animation: goldShimmer 5s linear infinite;
+}
+
+/* ── Section Label ─────────────────────────────────────────── */
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--ff-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+.section-label::before {
+  content: '';
+  display: block;
+  width: 36px;
+  height: 1px;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+
+/* ── Section Heading ───────────────────────────────────────── */
+.section-heading {
+  font-family: var(--ff-display);
+  font-size: clamp(38px, 5vw, 68px);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--white);
+}
+.section-subtext {
+  font-size: 17px;
+  color: var(--gray);
+  line-height: 1.75;
+  max-width: 580px;
+}
+
+/* ── Buttons ───────────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 34px;
+  border-radius: 4px;
+  font-family: var(--ff-body);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all var(--t);
+  border: none;
+}
+.btn-gold {
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-light));
+  color: var(--black);
+  background-size: 200% auto;
+  transition: background-position var(--t), transform var(--t-fast), box-shadow var(--t);
+}
+.btn-gold:hover {
+  background-position: right center;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(201,168,76,0.35);
+}
+.btn-outline {
+  background: transparent;
+  color: var(--white);
+  border: 1px solid rgba(255,255,255,0.3);
+}
+.btn-outline:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  transform: translateY(-2px);
+}
+.btn-gold-outline {
+  background: transparent;
+  color: var(--gold);
+  border: 1px solid var(--gold-border-h);
+  letter-spacing: 0.08em;
+}
+.btn-gold-outline:hover {
+  background: var(--gold);
+  color: var(--black);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(201,168,76,0.3);
+}
+
+/* ── NAVBAR ────────────────────────────────────────────────── */
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  padding: 22px 0;
+  transition: background var(--t), padding var(--t), backdrop-filter var(--t);
+}
+.navbar.scrolled {
+  background: rgba(0,0,0,0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 14px 0;
+  border-bottom: 1px solid var(--gold-border);
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 clamp(24px, 4vw, 60px);
+}
+.nav-logo {
+  font-family: var(--ff-display);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  display: flex;
+  gap: 8px;
+}
+.nav-logo__first { color: var(--white); }
+.nav-logo__last  { color: var(--gold); }
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.nav-links a {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+  transition: color var(--t-fast);
+  position: relative;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px; left: 0; right: 0;
+  height: 1px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--t);
+}
+.nav-links a:hover { color: var(--gold); }
+.nav-links a:hover::after { transform: scaleX(1); }
+.nav-cta { display: inline-flex; }
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  padding: 4px;
+}
+.nav-hamburger span {
+  display: block;
+  width: 24px;
+  height: 1.5px;
+  background: var(--white);
+  transition: all var(--t);
+}
+
+/* ── HERO ──────────────────────────────────────────────────── */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  background-color: #0A0800;
+  transform: scale(1.05);
+  transition: transform 0.1s linear;
+  overflow: hidden;
+}
+/* Video that fills the hero background */
+.hero__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
+  display: block;
+}
+/* Gradient overlay for readability */
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to right, rgba(0,0,0,0.85) 40%, rgba(0,0,0,0.4) 100%),
+    linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 50%);
+}
+.hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: var(--container);
+  width: 100%;
+  margin: 0 auto;
+  padding: 120px clamp(24px, 4vw, 60px) 80px;
+}
+.hero__eyebrow {
+  font-family: var(--ff-body);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+  animation: fadeUp 0.9s ease both;
+  animation-delay: 0.2s;
+}
+.hero__name {
+  font-family: var(--ff-display);
+  font-size: clamp(64px, 10vw, 140px);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+  background: linear-gradient(90deg, var(--gold-dark) 0%, var(--gold-shine) 30%, var(--gold) 50%, var(--gold-light) 70%, var(--gold-dark) 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: fadeUp 0.9s ease both, goldShimmer 6s linear infinite;
+  animation-delay: 0.4s, 1.5s;
+}
+.hero__titles {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+  animation: fadeUp 0.9s ease both;
+  animation-delay: 0.6s;
+}
+.hero__title-item {
+  font-family: var(--ff-display);
+  font-size: clamp(18px, 2.2vw, 26px);
+  font-weight: 300;
+  font-style: italic;
+  color: rgba(255,255,255,0.8);
+  letter-spacing: 0.02em;
+}
+.hero__title-sep {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--gold);
+  opacity: 0.7;
+}
+.hero__tagline {
+  font-size: clamp(15px, 1.6vw, 18px);
+  color: rgba(255,255,255,0.55);
+  font-weight: 300;
+  max-width: 500px;
+  line-height: 1.8;
+  margin-bottom: 44px;
+  animation: fadeUp 0.9s ease both;
+  animation-delay: 0.8s;
+}
+.hero__ctas {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  animation: fadeUp 0.9s ease both;
+  animation-delay: 1s;
+}
+/* Scroll indicator */
+.hero__scroll {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  animation: fadeIn 1s ease both 1.4s;
+}
+.hero__scroll span {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+}
+.scroll-line {
+  width: 1px;
+  height: 50px;
+  background: linear-gradient(to bottom, var(--gold), transparent);
+  animation: scrollBounce 1.8s ease-in-out infinite;
+}
+
+/* ── TICKER ────────────────────────────────────────────────── */
+.ticker-band {
+  background: var(--gold);
+  overflow: hidden;
+  padding: 14px 0;
+}
+.ticker__wrap {
+  display: flex;
+  overflow: hidden;
+}
+.ticker__track {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  white-space: nowrap;
+  animation: ticker 28s linear infinite;
+  flex-shrink: 0;
+}
+.ticker__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+  padding: 0 32px;
+  font-family: var(--ff-body);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--black);
+}
+.ticker__sep {
+  color: rgba(0,0,0,0.35);
+  font-size: 8px;
+}
+
+/* ── STATS BAND ────────────────────────────────────────────── */
+.stats-band {
+  background: var(--black3);
+  border-top: 1px solid var(--gold-border);
+  border-bottom: 1px solid var(--gold-border);
+  padding: 60px 0;
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+.stat-item {
+  text-align: center;
+  padding: 20px;
+  border-right: 1px solid var(--gold-border);
+}
+.stat-item:last-child { border-right: none; }
+.stat-num {
+  font-family: var(--ff-display);
+  font-size: clamp(42px, 5vw, 68px);
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 8px;
+  color: var(--gold);
+}
+.stat-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gray);
+}
+
+/* ── ABOUT ─────────────────────────────────────────────────── */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.about-img-wrap {
+  position: relative;
+}
+.about-img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  border-radius: var(--radius);
+  display: block;
+}
+.about-img-placeholder {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background: var(--card);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--gold-border);
+  font-family: var(--ff-display);
+  font-size: 80px;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: -0.02em;
+  opacity: 0.6;
+}
+/* Gold frame decoration */
+.about-img-wrap::before {
+  content: '';
+  position: absolute;
+  top: -16px; right: -16px;
+  bottom: 16px; left: 16px;
+  border: 1px solid var(--gold-border-h);
+  border-radius: var(--radius);
+  z-index: -1;
+}
+.about-img-wrap::after {
+  content: '';
+  position: absolute;
+  bottom: -12px; right: -12px;
+  width: 80px; height: 80px;
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+  border-radius: 4px;
+  opacity: 0.35;
+  z-index: -1;
+}
+.about-content { max-width: 560px; }
+.about-intro {
+  font-family: var(--ff-display);
+  font-size: clamp(22px, 2.5vw, 30px);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--gold-light);
+  line-height: 1.5;
+  margin-bottom: 28px;
+}
+.about-body {
+  color: rgba(255,255,255,0.65);
+  font-size: 16px;
+  line-height: 1.85;
+  margin-bottom: 36px;
+}
+.about-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+.about-tag {
+  padding: 8px 18px;
+  border-radius: 100px;
+  border: 1px solid var(--gold-border);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--gold-light);
+  letter-spacing: 0.08em;
+  transition: all var(--t-fast);
+}
+.about-tag:hover {
+  background: rgba(201,168,76,0.1);
+  border-color: var(--gold);
+}
+
+/* ── SPEAKING TOPICS ───────────────────────────────────────── */
+.speaking { background: var(--black2); }
+.speaking-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 60px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.topics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+.topic-card {
+  background: var(--card);
+  padding: 44px 36px;
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+  transition: all var(--t);
+  border: 1px solid transparent;
+}
+.topic-card::before {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold-dark), var(--gold));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--t);
+}
+.topic-card:hover {
+  background: #1A1600;
+  border-color: var(--gold-border);
+}
+.topic-card:hover::before { transform: scaleX(1); }
+.topic-icon {
+  font-size: 36px;
+  margin-bottom: 20px;
+  display: block;
+  transition: transform var(--t);
+}
+.topic-card:hover .topic-icon { transform: scale(1.1); }
+.topic-num {
+  position: absolute;
+  top: 20px; right: 24px;
+  font-family: var(--ff-display);
+  font-size: 60px;
+  font-weight: 700;
+  color: rgba(201,168,76,0.06);
+  line-height: 1;
+  user-select: none;
+}
+.topic-title {
+  font-family: var(--ff-display);
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+.topic-desc {
+  font-size: 14px;
+  color: var(--gray);
+  line-height: 1.75;
+}
+
+/* ── EMPIRE / BUSINESSES ───────────────────────────────────── */
+.empire { background: var(--black); }
+.empire-intro {
+  max-width: 640px;
+  margin-bottom: 64px;
+}
+.empire-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.empire-card {
+  background: var(--card);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius-lg);
+  padding: 40px 32px;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--t);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.empire-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(201,168,76,0.05), transparent 60%);
+  opacity: 0;
+  transition: opacity var(--t);
+}
+.empire-card:hover {
+  border-color: var(--gold-border-h);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px rgba(201,168,76,0.1);
+}
+.empire-card:hover::before { opacity: 1; }
+.empire-card--featured {
+  grid-column: span 2;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+}
+.empire-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius);
+  background: rgba(201,168,76,0.1);
+  border: 1px solid var(--gold-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  flex-shrink: 0;
+  transition: all var(--t);
+}
+.empire-card:hover .empire-icon {
+  background: rgba(201,168,76,0.15);
+  border-color: var(--gold);
+  animation: pulse-gold 2s ease-in-out infinite;
+}
+.empire-industry {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+.empire-name {
+  font-family: var(--ff-display);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+.empire-desc {
+  font-size: 14px;
+  color: var(--gray);
+  line-height: 1.7;
+}
+.empire-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 10px 16px;
+  border: 1px solid rgba(201,168,76,0.35);
+  border-radius: 4px;
+  background: rgba(201,168,76,0.06);
+  color: var(--gold);
+  text-decoration: none;
+  transition: background var(--t-fast), border-color var(--t-fast), gap var(--t-fast);
+}
+.empire-link:hover {
+  background: rgba(201,168,76,0.14);
+  border-color: var(--gold);
+  gap: 14px;
+}
+.empire-link__url {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: lowercase;
+  opacity: 0.9;
+}
+.empire-link__arrow {
+  font-size: 14px;
+  transition: transform var(--t-fast);
+}
+.empire-link:hover .empire-link__arrow { transform: translateX(3px); }
+
+/* ── QUOTE SECTION ─────────────────────────────────────────── */
+.quote-section {
+  background: var(--card);
+  border-top: 1px solid var(--gold-border);
+  border-bottom: 1px solid var(--gold-border);
+  padding: 100px 0;
+  text-align: center;
+}
+.quote-mark {
+  font-family: var(--ff-display);
+  font-size: 120px;
+  line-height: 0.7;
+  color: var(--gold);
+  opacity: 0.25;
+  display: block;
+  margin-bottom: 20px;
+}
+.quote-text {
+  font-family: var(--ff-display);
+  font-size: clamp(26px, 4vw, 50px);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--white);
+  line-height: 1.4;
+  max-width: 900px;
+  margin: 0 auto 30px;
+}
+.quote-attr {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* ── BOOK SECTION ──────────────────────────────────────────── */
+.book-section { background: var(--black2); }
+.book-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+.book-left { max-width: 500px; }
+.book-list {
+  margin: 32px 0 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.book-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-size: 15px;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.5;
+}
+.book-list-item::before {
+  content: '✦';
+  color: var(--gold);
+  font-size: 10px;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+/* Form */
+.book-form {
+  background: var(--card);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius-lg);
+  padding: 48px 44px;
+}
+.form-heading {
+  font-family: var(--ff-display);
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+.form-sub {
+  font-size: 14px;
+  color: var(--gray);
+  margin-bottom: 32px;
+}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-group { display: flex; flex-direction: column; gap: 7px; margin-bottom: 16px; }
+.form-group label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 6px;
+  padding: 13px 16px;
+  font-family: var(--ff-body);
+  font-size: 14px;
+  color: var(--white);
+  transition: border-color var(--t-fast);
+  outline: none;
+  width: 100%;
+  -webkit-appearance: none;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder { color: var(--gray2); }
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--gold);
+  background: rgba(201,168,76,0.04);
+}
+.form-group select option { background: #1A1A1A; }
+.form-group textarea { resize: vertical; min-height: 100px; }
+.form-submit {
+  width: 100%;
+  padding: 18px;
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-light));
+  background-size: 200% auto;
+  border: none;
+  border-radius: 6px;
+  font-family: var(--ff-body);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--black);
+  cursor: pointer;
+  transition: background-position var(--t), transform var(--t-fast), box-shadow var(--t);
+  margin-top: 8px;
+}
+.form-submit:hover {
+  background-position: right center;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(201,168,76,0.35);
+}
+#form-success {
+  display: none;
+  text-align: center;
+  padding: 24px;
+  font-family: var(--ff-display);
+  font-size: 22px;
+  font-style: italic;
+  color: var(--gold);
+}
+
+/* ── FOOTER ────────────────────────────────────────────────── */
+.footer {
+  background: var(--black);
+  border-top: 1px solid var(--gold-border);
+  padding: 60px 0 32px;
+}
+.footer-inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 48px;
+  flex-wrap: wrap;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--gold-border);
+  margin-bottom: 32px;
+}
+.footer-brand {}
+.footer-logo {
+  font-family: var(--ff-display);
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.footer-logo span { color: var(--gold); }
+.footer-tagline {
+  font-size: 13px;
+  color: var(--gray);
+  font-style: italic;
+  font-family: var(--ff-display);
+}
+.footer-nav {
+  display: flex;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+.footer-nav-col h5 {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+.footer-nav-col a {
+  display: block;
+  font-size: 14px;
+  color: var(--gray);
+  margin-bottom: 10px;
+  transition: color var(--t-fast);
+}
+.footer-nav-col a:hover { color: var(--gold-light); }
+.footer-social {
+  display: flex;
+  gap: 12px;
+}
+.social-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--gold-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: all var(--t-fast);
+  text-decoration: none;
+}
+.social-btn:hover {
+  border-color: var(--gold);
+  background: rgba(201,168,76,0.1);
+}
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.footer-copy {
+  font-size: 12px;
+  color: var(--gray2);
+}
+.footer-copy span { color: var(--gold); }
+
+/* Mobile drawer */
+.nav-drawer {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  pointer-events: none;
+}
+.nav-drawer__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  opacity: 0;
+  transition: opacity var(--t);
+}
+.nav-drawer__panel {
+  position: absolute;
+  top: 0; right: 0; bottom: 0;
+  width: min(320px, 85vw);
+  background: var(--black3);
+  border-left: 1px solid var(--gold-border);
+  padding: 80px 40px 40px;
+  transform: translateX(100%);
+  transition: transform var(--t);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.nav-drawer.open { pointer-events: all; }
+.nav-drawer.open .nav-drawer__overlay { opacity: 1; }
+.nav-drawer.open .nav-drawer__panel { transform: translateX(0); }
+.nav-drawer__panel a {
+  font-family: var(--ff-display);
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--white);
+  padding: 10px 0;
+  border-bottom: 1px solid var(--gold-border);
+  transition: color var(--t-fast);
+}
+.nav-drawer__panel a:hover { color: var(--gold); }
+.drawer-close {
+  position: absolute;
+  top: 24px; right: 24px;
+  background: none;
+  border: 1px solid var(--gold-border);
+  border-radius: 50%;
+  width: 40px; height: 40px;
+  color: var(--white);
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--t-fast);
+}
+.drawer-close:hover { border-color: var(--gold); color: var(--gold); }
+
+
+/* ── ABOUT IMAGE STACK ─────────────────────────────────────── */
+.about-img-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.about-img-secondary-placeholder {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: var(--card2);
+  border-radius: var(--radius);
+  border: 1px solid var(--gold-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+  transition: border-color var(--t-fast);
+}
+.about-img-secondary-placeholder:hover { border-color: var(--gold); }
+.about-img-secondary-placeholder .ph-icon { font-size: 28px; opacity: 0.35; }
+.about-img-secondary-placeholder .ph-text {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gray2);
+  font-family: var(--ff-body);
+}
+.about-img-secondary {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: var(--radius);
+  display: block;
+}
+
+/* ── SPEAKING STAGE BANNER ─────────────────────────────────── */
+.speaking-stage {
+  width: 100%;
+  aspect-ratio: 21/8;
+  margin-bottom: 60px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  position: relative;
+  background: var(--card);
+  border: 1px solid var(--gold-border);
+  transition: border-color var(--t), box-shadow var(--t);
+}
+.speaking-stage:hover {
+  border-color: var(--gold-border-h);
+  box-shadow: 0 0 40px rgba(201,168,76,0.12);
+}
+.speaking-stage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+.speaking-stage__ph {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 14px;
+  background: linear-gradient(135deg, #141400 0%, #1A1600 60%, #0A0800 100%);
+  position: relative;
+}
+.speaking-stage__ph::before,
+.speaking-stage__ph::after {
+  content: '';
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border-color: var(--gold);
+  border-style: solid;
+  opacity: 0.3;
+}
+.speaking-stage__ph::before { top: 20px; left: 20px; border-width: 1px 0 0 1px; }
+.speaking-stage__ph::after  { bottom: 20px; right: 20px; border-width: 0 1px 1px 0; }
+.speaking-stage__ph .ph-icon  { font-size: 52px; opacity: 0.3; }
+.speaking-stage__ph .ph-label {
+  font-family: var(--ff-display);
+  font-size: 20px;
+  font-style: italic;
+  color: var(--gold);
+  opacity: 0.45;
+  letter-spacing: 0.08em;
+}
+.speaking-stage__ph .ph-sub {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gray2);
+  font-family: var(--ff-body);
+}
+
+/* ── GALLERY STRIP ─────────────────────────────────────────── */
+.gallery-strip {
+  background: var(--black2);
+  padding: clamp(80px, 10vw, 120px) 0;
+  border-top: 1px solid var(--gold-border);
+}
+.gallery-strip-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+.gallery-strip-header .section-subtext { margin-bottom: 0; max-width: 400px; }
+.gallery-track {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 260px 260px;
+  gap: 12px;
+}
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  border: 1px solid var(--gold-border);
+  cursor: pointer;
+  transition: border-color var(--t), box-shadow var(--t);
+}
+.gallery-item:first-child { grid-row: span 2; }
+.gallery-item:hover {
+  border-color: var(--gold-border-h);
+  box-shadow: 0 8px 40px rgba(201,168,76,0.1);
+}
+.gallery-item img,
+.gallery-ph {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.gallery-ph-inner {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--card) 0%, #1A1600 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.6s ease;
+}
+.gallery-item:hover .gallery-ph-inner { transform: scale(1.03); }
+.gallery-item img { transition: transform 0.6s ease; }
+.gallery-item:hover img { transform: scale(1.04); }
+.gallery-ph-inner .ph-icon { font-size: 30px; opacity: 0.3; }
+.gallery-ph-inner .ph-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gray2);
+  font-family: var(--ff-body);
+  text-align: center;
+  padding: 0 12px;
+}
+.gallery-item__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity var(--t);
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+}
+.gallery-item:hover .gallery-item__overlay { opacity: 1; }
+.gallery-item__caption {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* ── RESPONSIVE ────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .about-grid { grid-template-columns: 1fr; gap: 48px; }
+  .gallery-track { grid-template-columns: 1fr 1fr; grid-template-rows: 220px 220px 220px; }
+  .gallery-item:first-child { grid-column: span 2; grid-row: span 1; }
+  .speaking-stage { aspect-ratio: 16/9; }
+  .about-img-wrap { max-width: 480px; }
+  .about-img-wrap::before, .about-img-wrap::after { display: none; }
+  .empire-grid { grid-template-columns: 1fr 1fr; }
+  .empire-card--featured { grid-column: span 2; }
+  .book-grid { grid-template-columns: 1fr; }
+  .book-left { max-width: 100%; }
+}
+@media (max-width: 768px) {
+  .nav-links, .nav-cta { display: none; }
+  .gallery-track { grid-template-columns: 1fr 1fr; grid-template-rows: 190px 190px 190px; }
+  .gallery-item:first-child { grid-column: span 2; grid-row: span 1; }
+  .speaking-stage { aspect-ratio: 16/9; margin-bottom: 40px; }
+  .nav-hamburger { display: flex; }
+  .hero__name { font-size: clamp(52px, 14vw, 80px); }
+  .topics-grid { grid-template-columns: 1fr 1fr; }
+  .empire-grid { grid-template-columns: 1fr; }
+  .empire-card--featured { grid-column: span 1; flex-direction: column; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .stat-item:nth-child(2) { border-right: none; }
+  .form-row { grid-template-columns: 1fr; }
+  .footer-inner { flex-direction: column; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+}
+@media (max-width: 480px) {
+  .topics-grid { grid-template-columns: 1fr; }
+  .gallery-track { grid-template-rows: 160px 160px 160px; }
+  .hero__ctas { flex-direction: column; }
+  .hero__ctas .btn { width: 100%; justify-content: center; }
+  .book-form { padding: 32px 24px; }
+  .stats-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* ── Ambition & Perseverance Video Section ──────────────────── */
+.ambition-section {
+  background: linear-gradient(180deg, var(--black2) 0%, var(--black) 100%);
+  overflow: hidden;
+}
+.ambition-header {
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto 52px;
+}
+.ambition-header .section-subtext {
+  margin: 0 auto;
+}
+.ambition-video-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto 48px;
+  aspect-ratio: 16/9;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(201,168,76,0.25);
+  box-shadow: 0 0 80px rgba(201,168,76,0.1), 0 24px 60px rgba(0,0,0,0.6);
+}
+.ambition-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+  background: #000;
+}
+.ambition-quote {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.ambition-quote .ambition-quote__mark {
+  color: var(--gold);
+  font-size: 24px;
+}
+.ambition-quote p {
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  font-size: clamp(17px, 2.2vw, 24px);
+  font-style: italic;
+  color: var(--cream);
+  line-height: 1.6;
+  margin: 0;
+}
+.ambition-quote span:last-child {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+@media (max-width: 768px) {
+  .ambition-video-wrap { border-radius: 6px; }
+  .ambition-header { margin-bottom: 36px; }
+}
+
+/* ── About Image real photos ─────────────────────────────────── */
+.about-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 4px;
+  display: block;
+}
+.about-img-secondary {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 4px;
+  display: block;
+}
+
+/* ── Gallery real images ─────────────────────────────────────── */
+.gallery-item img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.gallery-item:hover img { transform: scale(1.05); }
+
+
+/* ── Empire Cards — Logo Update ──────────────────────────────── */
+.empire-card__logo-wrap {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  min-height: 64px;
+}
+.empire-logo {
+  max-height: 56px;
+  max-width: 180px;
+  width: auto;
+  object-fit: contain;
+  object-position: left center;
+}
+.empire-card--featured .empire-logo {
+  max-height: 68px;
+  max-width: 220px;
+}
+.empire-card__body { flex: 1; }
+
+/* Update featured card layout to stack logo above body */
+.empire-card--featured {
+  display: flex;
+  flex-direction: column;
+}
+
+</style>
+</head>
+<body>
+<!-- ═══════════════════════════════════════════════════════════
+     LUIGI LEON — Personal Brand Landing Page
+     Sections: Navbar · Hero · Ticker · Stats · About ·
+               Speaking · Empire · Quote · Book · Footer
+     ═══════════════════════════════════════════════════════════ -->
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <span class="nav-logo__first">Luigi</span>
+      <span class="nav-logo__last">Leon</span>
+    </a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#speaking">Speaking</a>
+      <a href="#empire">Businesses</a>
+      <a href="#book">Book Luigi</a>
+    </div>
+    <a href="#book" class="btn btn-gold-outline nav-cta" style="font-size:11px;padding:12px 24px;">Book Now</a>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE DRAWER -->
+<div class="nav-drawer" id="nav-drawer">
+  <div class="nav-drawer__overlay" id="drawer-overlay"></div>
+  <div class="nav-drawer__panel">
+    <button class="drawer-close" id="drawer-close" aria-label="Close menu">✕</button>
+    <a href="#about" class="drawer-link">About</a>
+    <a href="#speaking" class="drawer-link">Speaking</a>
+    <a href="#empire" class="drawer-link">Businesses</a>
+    <a href="#book" class="drawer-link">Book Luigi</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero__bg" id="heroBg">
+    <!--
+      Hero Background Video
+      Replace HERO_VIDEO_URL_HERE with the actual MP4/WebM URL once received.
+      For Webflow: upload video to Assets and paste the CDN URL.
+    -->
+    <video class="hero__video" autoplay muted loop playsinline preload="none">
+      <source src="hero-bg.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hero__overlay"></div>
+  <div class="hero__content container">
+    <div class="hero__eyebrow">Hello My Beautiful Family!</div>
+    <h1 class="hero__name">LUIGI LEON</h1>
+    <div class="hero__titles">
+      <span class="hero__title-item">Entrepreneur</span>
+      <span class="hero__title-sep"></span>
+      <span class="hero__title-item">Speaker</span>
+      <span class="hero__title-sep"></span>
+      <span class="hero__title-item">Visionary</span>
+    </div>
+    <p class="hero__tagline">20+ years building empires across real estate, solar energy, luxury automotive and beyond. On a mission to inspire, empower, and unlock prosperity in others.</p>
+    <div class="hero__ctas">
+      <a href="#book" class="btn btn-gold">Book Luigi to Speak</a>
+      <a href="#about" class="btn btn-outline">Discover His Story</a>
+    </div>
+  </div>
+  <div class="hero__scroll">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- TICKER BAND -->
+<div class="ticker-band">
+  <div class="ticker__wrap">
+    <div class="ticker__track" id="ticker">
+      <span class="ticker__item">Real Estate <span class="ticker__sep">✦</span></span>
+      <span class="ticker__item">Solar Energy <span class="ticker__sep">✦</span></span>
+      <span class="ticker__item">Luxury Automotive <span class="ticker__sep">✦</span></span>
+      <span class="ticker__item">Architecture & Design <span class="ticker__sep">✦</span></span>
+      <span class="ticker__item">International Speaker <span class="ticker__sep">✦</span></span>
+      <span class="ticker__item">Faith &amp; Mindset <span class="ticker__sep">✦</span></span>
+      <span class="ticker__item">Law of Attraction <span class="ticker__sep">✦</span></span>
+      <span class="ticker__item">Branding &amp; Sales <span class="ticker__sep">✦</span></span>
+      <span class="ticker__item">PG Lux Empire <span class="ticker__sep">✦</span></span>
+      <span class="ticker__item">Mr. Prosperity <span class="ticker__sep">✦</span></span>
+      <!-- Duplicate for seamless loop -->
+      <span class="ticker__item">Real Estate <span class="ticker__sep">✦</span></span>
+      <span class="ticker__item">Solar Energy <span class="ticker__sep">✦</span></span>
+      <span class="ticker__item">Luxury Automotive <span class="ticker__sep">✦</span></span>
+      <span class="ticker__item">Architecture & Design <span class="ticker__sep">✦</span></span>
+      <span class="ticker__item">International Speaker <span class="ticker__sep">✦</span></span>
+      <span class="ticker__item">Faith &amp; Mindset <span class="ticker__sep">✦</span></span>
+      <span class="ticker__item">Law of Attraction <span class="ticker__sep">✦</span></span>
+      <span class="ticker__item">Branding &amp; Sales <span class="ticker__sep">✦</span></span>
+      <span class="ticker__item">PG Lux Empire <span class="ticker__sep">✦</span></span>
+      <span class="ticker__item">Mr. Prosperity <span class="ticker__sep">✦</span></span>
+    </div>
+  </div>
+</div>
+
+<!-- STATS BAND -->
+<div class="stats-band">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item" data-reveal>
+        <div class="stat-num"><span class="counter" data-target="20">0</span>+</div>
+        <div class="stat-label">Years in Business</div>
+      </div>
+      <div class="stat-item" data-reveal data-delay="1">
+        <div class="stat-num"><span class="counter" data-target="5">0</span></div>
+        <div class="stat-label">Businesses Built</div>
+      </div>
+      <div class="stat-item" data-reveal data-delay="2">
+        <div class="stat-num"><span class="counter" data-target="2005">0</span></div>
+        <div class="stat-label">Entrepreneur Since</div>
+      </div>
+      <div class="stat-item" data-reveal data-delay="3">
+        <div class="stat-num">∞</div>
+        <div class="stat-label">Prosperity to Share</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="section about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-wrap" data-reveal="left">
+        <div class="about-img-stack">
+
+          <!-- MAIN PORTRAIT -->
+          <img src="themanbehind.jpeg" alt="Luigi Leon — Mr. Prosperity" class="about-img">
+
+          <!-- SECONDARY PHOTO — add more of Luigi's photos here when ready -->
+
+        </div>
+      </div>
+      <div class="about-content">
+        <div class="section-label" data-reveal>The Man Behind the Brand</div>
+        <h2 class="section-heading" data-reveal data-delay="1" style="margin-bottom:24px;">
+          More Than an<br>
+          <em class="gold-text gold-text--animate">Entrepreneur.</em>
+        </h2>
+        <p class="about-intro" data-reveal data-delay="2">"First a husband to my best friend and partner in life — Paola. Then a proud father to Zoe and Julian. Everything else is built on that foundation."</p>
+        <p class="about-body" data-reveal data-delay="3">
+          Luigi Leon is a seasoned entrepreneur and dynamic public speaker whose influence spans over two decades and multiple industries. Since 2005, he has successfully led ventures in real estate investment and development, solar energy, luxury and exotic car rentals, and the architecture and interior design firm he co-founded with his wife and business partner, Paola.
+          <br><br>
+          Known as <strong style="color:var(--gold-light);">Mr. Prosperity</strong>, Luigi brings a rare combination of real-world experience and motivational mastery to every stage and boardroom. He speaks from lived results — not theory — and his mission is simple: to inspire and empower audiences to create meaningful and lasting impact.
+        </p>
+        <div class="about-tags" data-reveal data-delay="4">
+          <span class="about-tag">Real Estate</span>
+          <span class="about-tag">Solar Energy</span>
+          <span class="about-tag">Luxury Automotive</span>
+          <span class="about-tag">Architecture</span>
+          <span class="about-tag">Faith</span>
+          <span class="about-tag">Law of Attraction</span>
+        </div>
+        <a href="#book" class="btn btn-gold" data-reveal data-delay="5">Book a Speaking Engagement</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPEAKING TOPICS -->
+<section class="section speaking" id="speaking">
+  <div class="container">
+    <div class="speaking-header">
+      <div>
+        <div class="section-label" data-reveal>On Stage</div>
+        <h2 class="section-heading" data-reveal data-delay="1">What Luigi<br>Speaks About</h2>
+      </div>
+      <p class="section-subtext" data-reveal data-delay="2">Every talk is rooted in real experience — not motivational fluff. Luigi speaks from decades of building, failing, rising, and thriving.</p>
+    </div>
+    <!--
+      SPEAKING STAGE BANNER
+      Replace placeholder with an actual photo of Luigi on stage.
+      Suggested: wide/landscape image 1600x600px or similar.
+    -->
+    <div class="speaking-stage" data-reveal>
+      <img src="Meet.JPG" alt="Luigi Leon — Live on Stage">
+    </div>
+
+    <div class="topics-grid">
+      <div class="topic-card" data-reveal>
+        <span class="topic-icon">🙏</span>
+        <span class="topic-num">01</span>
+        <div class="topic-title">Faith</div>
+        <p class="topic-desc">How faith has been the non-negotiable foundation of every business built, every storm weathered, and every breakthrough achieved.</p>
+      </div>
+      <div class="topic-card" data-reveal data-delay="1">
+        <span class="topic-icon">🌟</span>
+        <span class="topic-num">02</span>
+        <div class="topic-title">Law of Attraction</div>
+        <p class="topic-desc">The principles and practices that have drawn opportunity, wealth, and meaningful relationships into Luigi's life — and how to apply them to yours.</p>
+      </div>
+      <div class="topic-card" data-reveal data-delay="2">
+        <span class="topic-icon">💎</span>
+        <span class="topic-num">03</span>
+        <div class="topic-title">Branding</div>
+        <p class="topic-desc">Building a brand that's undeniable — from PG Lux to Mr. Prosperity. The strategy, the story, and the identity that commands a premium.</p>
+      </div>
+      <div class="topic-card" data-reveal data-delay="1">
+        <span class="topic-icon">💰</span>
+        <span class="topic-num">04</span>
+        <div class="topic-title">Sales Mastery</div>
+        <p class="topic-desc">Closing deals across industries for 20+ years. Luigi delivers the mindset and mechanics behind high-performance sales and influence.</p>
+      </div>
+      <div class="topic-card" data-reveal data-delay="2">
+        <span class="topic-icon">☀️</span>
+        <span class="topic-num">05</span>
+        <div class="topic-title">Solar Energy</div>
+        <p class="topic-desc">The business opportunity of the next decade. Luigi breaks down the solar market, investment strategy, and why now is the moment to move.</p>
+      </div>
+      <div class="topic-card" data-reveal data-delay="3">
+        <span class="topic-icon">🏗️</span>
+        <span class="topic-num">06</span>
+        <div class="topic-title">Real Estate Investing</div>
+        <p class="topic-desc">From his first deal to large-scale development — Luigi shares the blueprint for building generational wealth through real estate.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY: Luigi in Action -->
+<section class="gallery-strip" id="gallery">
+  <div class="container">
+    <div class="gallery-strip-header">
+      <div>
+        <div class="section-label" data-reveal>In the Moment</div>
+        <h2 class="section-heading" style="font-size:clamp(28px,3.5vw,52px);" data-reveal data-delay="1">Luigi in Action</h2>
+      </div>
+      <p class="section-subtext" data-reveal data-delay="2">On stage. In the boardroom. Building empires. Every moment captured tells a piece of the story.</p>
+    </div>
+
+    <!--
+      GALLERY PHOTOS
+      Replace each placeholder div with an <img> tag once photos are received.
+      Recommended: square or portrait images, min 600x600px.
+      Featured (first item): wider image, min 800x800px.
+    -->
+    <div class="gallery-track">
+
+      <!-- FEATURED — large left panel (spans 2 rows) -->
+      <div class="gallery-item" data-reveal>
+        <img src="magazine.png" alt="Luigi Leon — Mr. Prosperity">
+        <div class="gallery-item__overlay">
+          <span class="gallery-item__caption">Mr. Prosperity</span>
+        </div>
+      </div>
+
+      <!-- Photo 2 -->
+      <div class="gallery-item" data-reveal data-delay="1">
+        <img src="lambo.jpeg" alt="Luigi Leon">
+        <div class="gallery-item__overlay">
+          <span class="gallery-item__caption">Mr. Prosperity</span>
+        </div>
+      </div>
+
+      <!-- Photo 3 -->
+      <div class="gallery-item" data-reveal data-delay="2">
+        <img src="horizontal.jpeg" alt="Luigi Leon">
+        <div class="gallery-item__overlay">
+          <span class="gallery-item__caption">Mr. Prosperity</span>
+        </div>
+      </div>
+
+      <!-- Photo 4 -->
+      <div class="gallery-item" data-reveal data-delay="1">
+        <img src="luigi.jpeg" alt="Luigi Leon">
+        <div class="gallery-item__overlay">
+          <span class="gallery-item__caption">Mr. Prosperity</span>
+        </div>
+      </div>
+
+      <!-- Photo 5 -->
+      <div class="gallery-item" data-reveal data-delay="2">
+        <img src="delusional.JPG" alt="Luigi Leon — Mr. Prosperity">
+        <div class="gallery-item__overlay">
+          <span class="gallery-item__caption">Mr. Prosperity</span>
+        </div>
+      </div>
+
+    </div><!-- /.gallery-track -->
+  </div>
+</section>
+
+<!-- THE EMPIRE -->
+<section class="section empire" id="empire">
+  <div class="container">
+    <div class="empire-intro">
+      <div class="section-label" data-reveal>The Portfolio</div>
+      <h2 class="section-heading" data-reveal data-delay="1" style="margin-bottom:20px;">The Empire He Built</h2>
+      <p class="section-subtext" data-reveal data-delay="2">Six businesses. Two decades. One relentless vision. Here's a look at what Luigi has built and leads.</p>
+    </div>
+    <div class="empire-grid">
+
+      <!-- 1. Featured: PG Luxury Services -->
+      <div class="empire-card empire-card--featured" data-reveal>
+        <div class="empire-card__logo-wrap">
+          <img src="PG lux.png" alt="PG Luxury Services" class="empire-logo">
+        </div>
+        <div class="empire-card__body">
+          <div class="empire-industry">Exotic Car Rental — Tampa · Orlando · Miami</div>
+          <div class="empire-name">PG Luxury Services</div>
+          <p class="empire-desc">Tampa's go-to destination for exotic and luxury car rentals. Drive a Lamborghini, Ferrari, McLaren, or Rolls-Royce — fully insured and ready for any occasion. Available across Tampa, Orlando, and Miami.</p>
+          <a href="https://pgluxuryservices.com/" target="_blank" rel="noopener" class="empire-link">
+            <span class="empire-link__url">pgluxuryservices.com</span>
+            <span class="empire-link__arrow">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 2. PG Lux Auto Boutique -->
+      <div class="empire-card" data-reveal data-delay="1">
+        <div class="empire-card__logo-wrap">
+          <img src="PG lux.png" alt="PG Lux Auto Boutique" class="empire-logo">
+        </div>
+        <div class="empire-card__body">
+          <div class="empire-industry">Auto Restyling — Tampa, FL</div>
+          <div class="empire-name">PG Lux Auto Boutique</div>
+          <p class="empire-desc">Tampa's premier auto restyling boutique. From ECU tuning and performance upgrades to custom aesthetics — built for exotic and luxury platforms including Lamborghini, Ferrari, McLaren, and more.</p>
+          <a href="https://pgluxautoboutique.com/" target="_blank" rel="noopener" class="empire-link">
+            <span class="empire-link__url">pgluxautoboutique.com</span>
+            <span class="empire-link__arrow">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 3. PG Solar Solutions -->
+      <div class="empire-card" data-reveal data-delay="2">
+        <div class="empire-card__logo-wrap">
+          <img src="pg solar.png" alt="PG Solar Solutions" class="empire-logo">
+        </div>
+        <div class="empire-card__body">
+          <div class="empire-industry">Solar Energy — Florida & Puerto Rico</div>
+          <div class="empire-name">PG Solar Solutions</div>
+          <p class="empire-desc">Residential and commercial solar energy with 3,000+ installations across Florida and Puerto Rico. Ranked #5 solar contractor in Florida — delivering energy freedom to homeowners and businesses.</p>
+          <a href="https://pgsolarsolutions.com/" target="_blank" rel="noopener" class="empire-link">
+            <span class="empire-link__url">pgsolarsolutions.com</span>
+            <span class="empire-link__arrow">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 4. PG Green Homes -->
+      <div class="empire-card" data-reveal data-delay="1">
+        <div class="empire-card__logo-wrap">
+          <img src="pg green homes.jpg" alt="PG Green Homes" class="empire-logo">
+        </div>
+        <div class="empire-card__body">
+          <div class="empire-industry">Sustainable Construction</div>
+          <div class="empire-name">PG Green Homes</div>
+          <p class="empire-desc">Building the future with green technology. PG Green Homes delivers eco-smart residential and commercial structures using prefabricated systems engineered for durability, efficiency, and sustainability.</p>
+          <a href="https://pggreenhomes.com/" target="_blank" rel="noopener" class="empire-link">
+            <span class="empire-link__url">pggreenhomes.com</span>
+            <span class="empire-link__arrow">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 5. PG Studio Design -->
+      <div class="empire-card" data-reveal data-delay="2">
+        <div class="empire-card__logo-wrap">
+          <img src="PG-Studio-logo.svg" alt="PG Studio Design" class="empire-logo">
+        </div>
+        <div class="empire-card__body">
+          <div class="empire-industry">Architecture & Interior Design — Tampa</div>
+          <div class="empire-name">PG Studio Design</div>
+          <p class="empire-desc">Art, architecture, and interior design studio co-founded with Paola. From high-end residential to luxury commercial spaces — every project is designed with precision, purpose, and soul.</p>
+          <a href="https://pgstudiodesign.com/" target="_blank" rel="noopener" class="empire-link">
+            <span class="empire-link__url">pgstudiodesign.com</span>
+            <span class="empire-link__arrow">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 6. Prosperity Minds -->
+      <div class="empire-card" data-reveal data-delay="3">
+        <div class="empire-card__logo-wrap">
+          <img src="PG lux.png" alt="Prosperity Minds" class="empire-logo">
+        </div>
+        <div class="empire-card__body">
+          <div class="empire-industry">Business Education & Coaching</div>
+          <div class="empire-name">Prosperity Minds</div>
+          <p class="empire-desc">The car rental business playbook — Luigi's blueprint for launching and scaling a profitable exotic car rental operation. Built from 20+ years of real-world experience, not theory.</p>
+          <a href="https://prosperityminds.com/" target="_blank" rel="noopener" class="empire-link">
+            <span class="empire-link__url">prosperityminds.com</span>
+            <span class="empire-link__arrow">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 7. Cars4Impact -->
+      <div class="empire-card" data-reveal data-delay="4">
+        <div class="empire-card__logo-wrap">
+          <img src="cars4impact.png" alt="Cars4Impact" class="empire-logo">
+        </div>
+        <div class="empire-card__body">
+          <div class="empire-industry">Car Show & Community Impact</div>
+          <div class="empire-name">Cars4Impact</div>
+          <p class="empire-desc">Where horsepower meets purpose. Cars4Impact is a premier car show experience built around community, culture, and giving back — uniting car enthusiasts and changemakers under one roof.</p>
+          <a href="https://cars4impact.com/" target="_blank" rel="noopener" class="empire-link">
+            <span class="empire-link__url">cars4impact.com</span>
+            <span class="empire-link__arrow">→</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+</section>
+
+
+<!-- AMBITION & PERSEVERANCE VIDEO -->
+<section class="section ambition-section" id="ambition">
+  <div class="container">
+    <div class="ambition-header">
+      <div class="section-label" data-reveal>The Mindset</div>
+      <h2 class="section-heading" data-reveal data-delay="1">
+        Ambition &amp;<br>
+        <em class="gold-text gold-text--animate">Perseverance</em>
+      </h2>
+      <p class="section-subtext" data-reveal data-delay="2">Success isn't given — it's built. Watch Luigi break down the two forces that have driven everything he's created.</p>
+    </div>
+    <div class="ambition-video-wrap" data-reveal data-delay="1">
+      <video class="ambition-video" controls preload="metadata" poster="">
+        <source src="ambition.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="ambition-quote" data-reveal data-delay="2">
+      <span class="ambition-quote__mark">✦</span>
+      <p>"The difference between where you are and where you want to be is your willingness to stay in the game."</p>
+      <span>— Luigi Leon</span>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE SECTION -->
+<section class="quote-section">
+  <div class="container">
+    <span class="quote-mark" data-reveal>"</span>
+    <p class="quote-text" data-reveal data-delay="1">
+      Prosperity is not just what you accumulate — it's who you become in the pursuit of it. Build your empire from the inside out.
+    </p>
+    <div class="quote-attr" data-reveal data-delay="2">— Luigi Leon &nbsp;·&nbsp; Mr. Prosperity</div>
+  </div>
+</section>
+
+<!-- BOOK LUIGI -->
+<section class="section book-section" id="book">
+  <div class="container">
+    <div class="book-grid">
+      <div class="book-left">
+        <div class="section-label" data-reveal>Get Luigi on Your Stage</div>
+        <h2 class="section-heading" data-reveal data-delay="1" style="margin-bottom:20px;">
+          Ready to<br>
+          <span class="gold-text gold-text--animate">Elevate Your Event?</span>
+        </h2>
+        <p class="section-subtext" data-reveal data-delay="2" style="margin-bottom:0;">Luigi brings energy, authenticity, and results-driven insight to every stage. Whether it's a corporate conference, entrepreneurship summit, or faith-based event — he delivers.</p>
+        <ul class="book-list" data-reveal data-delay="3">
+          <li class="book-list-item">Keynote speeches tailored to your audience and theme</li>
+          <li class="book-list-item">Workshops on real estate, branding, sales, and solar</li>
+          <li class="book-list-item">Faith-centered and motivational talks</li>
+          <li class="book-list-item">Panel appearances and moderated discussions</li>
+          <li class="book-list-item">Available for corporate, faith, and entrepreneurship events</li>
+        </ul>
+        <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;" data-reveal data-delay="4">
+          <a href="https://www.instagram.com/luigileonofficial/" target="_blank" rel="noopener" class="btn btn-gold-outline">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            Follow on Instagram
+          </a>
+        </div>
+      </div>
+
+      <div class="book-form" data-reveal="right">
+        <div class="form-heading">Book Luigi</div>
+        <div class="form-sub">Fill out the form and his team will be in touch within 24 hours.</div>
+        <form id="booking-form" action="https://formspree.io/f/FORM_ID_HERE" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="first_name" placeholder="John" required />
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="last_name" placeholder="Smith" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="you@company.com" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" />
+          </div>
+          <div class="form-group">
+            <label for="event_type">Event Type</label>
+            <select id="event_type" name="event_type" required>
+              <option value="" disabled selected>Select event type</option>
+              <option>Corporate Conference</option>
+              <option>Entrepreneurship Summit</option>
+              <option>Faith-Based Event</option>
+              <option>Sales Training / Workshop</option>
+              <option>Real Estate Event</option>
+              <option>Motivational Keynote</option>
+              <option>Panel / Moderated Discussion</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="event_date">Event Date (Approximate)</label>
+            <input type="text" id="event_date" name="event_date" placeholder="e.g. October 2025" />
+          </div>
+          <div class="form-group">
+            <label for="message">Tell Us About Your Event</label>
+            <textarea id="message" name="message" rows="4" placeholder="Event location, expected audience size, theme, budget range..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send Booking Request →</button>
+        </form>
+        <div id="form-success" style="display:none;text-align:center;padding:32px;font-family:'Cormorant Garamond',serif;font-size:22px;font-style:italic;color:#C9A84C;">
+          ✦ Thank you! Luigi's team will be in touch within 24 hours.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">Luigi <span>Leon</span></div>
+        <div class="footer-tagline">"Mr. Prosperity" — Entrepreneur · Speaker · Visionary</div>
+      </div>
+      <div class="footer-nav">
+        <div class="footer-nav-col">
+          <h5>Navigation</h5>
+          <a href="#about">About</a>
+          <a href="#speaking">Speaking Topics</a>
+          <a href="#empire">Businesses</a>
+          <a href="#book">Book Luigi</a>
+        </div>
+        <div class="footer-nav-col">
+          <h5>Businesses</h5>
+          <a href="https://pgluxautoboutique.com/" target="_blank">PG Lux Auto Boutique</a>
+          <a href="https://pgluxuryservices.com/" target="_blank">PG Luxury Services</a>
+        </div>
+        <div class="footer-nav-col">
+          <h5>Connect</h5>
+          <div class="footer-social" style="margin-top:4px;">
+            <a href="https://www.instagram.com/luigileonofficial/" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2025 <span>Luigi Leon</span>. All rights reserved. Mr. Prosperity.</div>
+      <div class="footer-copy">Built with purpose. Designed for prosperity.</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+
+  // ── Navbar: transparent → solid on scroll ──────────────────
+  const navbar = document.getElementById('navbar');
+  let _navTick = false;
+  window.addEventListener('scroll', () => {
+    if (!_navTick) {
+      requestAnimationFrame(() => {
+        navbar.classList.toggle('scrolled', window.scrollY > 60);
+        _navTick = false;
+      });
+      _navTick = true;
+    }
+  }, { passive: true });
+
+  // ── Mobile Drawer ───────────────────────────────────────────
+  const drawer = document.getElementById('nav-drawer');
+  const overlay = document.getElementById('drawer-overlay');
+  document.getElementById('hamburger').addEventListener('click', () => drawer.classList.add('open'));
+  document.getElementById('drawer-close').addEventListener('click', () => drawer.classList.remove('open'));
+  overlay.addEventListener('click', () => drawer.classList.remove('open'));
+  document.querySelectorAll('.drawer-link').forEach(a => {
+    a.addEventListener('click', () => drawer.classList.remove('open'));
+  });
+
+  // ── Scroll Reveal ───────────────────────────────────────────
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('is-visible');
+        revealObserver.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('[data-reveal]').forEach(el => revealObserver.observe(el));
+
+  // ── Counter Animation ───────────────────────────────────────
+  function animateCounter(el) {
+    const target = parseInt(el.dataset.target, 10);
+    const duration = 1600;
+    const start = performance.now();
+    const startVal = 0;
+
+    function step(now) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      // Ease out
+      const eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.floor(startVal + (target - startVal) * eased).toLocaleString();
+      if (progress < 1) requestAnimationFrame(step);
+      else el.textContent = target.toLocaleString();
+    }
+    requestAnimationFrame(step);
+  }
+
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        animateCounter(e.target);
+        counterObserver.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('.counter').forEach(el => counterObserver.observe(el));
+
+  // ── Hero Parallax ───────────────────────────────────────────
+  const heroBg = document.getElementById('heroBg');
+  if (heroBg) {
+    window.addEventListener('scroll', () => {
+      if (!_navTick) {
+        requestAnimationFrame(() => {
+          const scrolled = window.scrollY;
+          if (scrolled < window.innerHeight) {
+            heroBg.style.transform = `scale(1.05) translateY(${scrolled * 0.2}px)`;
+          }
+        });
+      }
+    }, { passive: true });
+  }
+
+  // ── Form Submission ─────────────────────────────────────────
+  const form = document.getElementById('booking-form');
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('.form-submit');
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          form.style.display = 'none';
+          document.getElementById('form-success').style.display = 'block';
+        } else {
+          btn.textContent = 'Error — please try again';
+          btn.disabled = false;
+        }
+      } catch {
+        btn.textContent = 'Error — please try again';
+        btn.disabled = false;
+      }
+    });
+  }
+
+  // ── Smooth close mobile nav on resize ──────────────────────
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) drawer.classList.remove('open');
+  }, { passive: true });
+
+})();
+</script>
+</body>
+</html>
