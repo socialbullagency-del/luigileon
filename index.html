@@ -275,15 +275,15 @@ button { font-family: inherit; cursor: pointer; }
   padding: 0 clamp(24px, 4vw, 60px);
 }
 .nav-logo {
-  font-family: var(--ff-display);
-  font-size: 22px;
-  font-weight: 700;
-  letter-spacing: 0.05em;
   display: flex;
-  gap: 8px;
+  align-items: center;
 }
-.nav-logo__first { color: var(--white); }
-.nav-logo__last  { color: var(--gold); }
+.nav-logo__img {
+  height: 38px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
 .nav-links {
   display: flex;
   align-items: center;
@@ -1462,8 +1462,7 @@ button { font-family: inherit; cursor: pointer; }
 <nav class="navbar" id="navbar">
   <div class="nav-inner">
     <a href="/" class="nav-logo">
-      <span class="nav-logo__first">Luigi</span>
-      <span class="nav-logo__last">Leon</span>
+      <img src="luigileonlogo.png" alt="Luigi Leon — Mr. Prosperity" class="nav-logo__img">
     </a>
     <div class="nav-links">
       <a href="#about">About</a>
@@ -1563,7 +1562,7 @@ button { font-family: inherit; cursor: pointer; }
         <div class="stat-label">Years in Business</div>
       </div>
       <div class="stat-item" data-reveal data-delay="1">
-        <div class="stat-num"><span class="counter" data-target="5">0</span></div>
+        <div class="stat-num"><span class="counter" data-target="8">0</span></div>
         <div class="stat-label">Businesses Built</div>
       </div>
       <div class="stat-item" data-reveal data-delay="2">
@@ -1747,7 +1746,7 @@ button { font-family: inherit; cursor: pointer; }
     <div class="empire-intro">
       <div class="section-label" data-reveal>The Portfolio</div>
       <h2 class="section-heading" data-reveal data-delay="1" style="margin-bottom:20px;">The Empire He Built</h2>
-      <p class="section-subtext" data-reveal data-delay="2">Six businesses. Two decades. One relentless vision. Here's a look at what Luigi has built and leads.</p>
+      <p class="section-subtext" data-reveal data-delay="2">Eight businesses. Two decades. One relentless vision. Here's a look at what Luigi has built and leads.</p>
     </div>
     <div class="empire-grid">
 
@@ -1858,6 +1857,22 @@ button { font-family: inherit; cursor: pointer; }
           <p class="empire-desc">Where horsepower meets purpose. Cars4Impact is a premier car show experience built around community, culture, and giving back — uniting car enthusiasts and changemakers under one roof.</p>
           <a href="https://cars4impact.com/" target="_blank" rel="noopener" class="empire-link">
             <span class="empire-link__url">cars4impact.com</span>
+            <span class="empire-link__arrow">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 8. PG Productions -->
+      <div class="empire-card" data-reveal data-delay="5">
+        <div class="empire-card__logo-wrap">
+          <img src="pgproductions-logo.png" alt="PG Productions" class="empire-logo">
+        </div>
+        <div class="empire-card__body">
+          <div class="empire-industry">Audiovisual Production — Tampa, FL</div>
+          <div class="empire-name">PG Productions</div>
+          <p class="empire-desc">Scaling businesses through high-quality, converting audiovisual content. PG Productions crafts cinematic brand stories, promotional videos, and content strategies designed to captivate audiences and drive real business growth.</p>
+          <a href="https://pgproductions.vip/" target="_blank" rel="noopener" class="empire-link">
+            <span class="empire-link__url">pgproductions.vip</span>
             <span class="empire-link__arrow">→</span>
           </a>
         </div>
