@@ -981,12 +981,18 @@ button { font-family: inherit; cursor: pointer; }
 }
 .footer-brand {}
 .footer-logo {
-  font-family: var(--ff-display);
-  font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 10px;
+  display: block;
+  margin-bottom: 14px;
 }
-.footer-logo span { color: var(--gold); }
+.footer-logo img {
+  height: 72px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+@media (max-width: 768px) {
+  .footer-logo img { height: 60px; }
+}
 .footer-tagline {
   font-size: 13px;
   color: var(--gray);
@@ -2011,7 +2017,9 @@ button { font-family: inherit; cursor: pointer; }
   <div class="container">
     <div class="footer-inner">
       <div class="footer-brand">
-        <div class="footer-logo">Luigi <span>Leon</span></div>
+        <a href="#hero" class="footer-logo" aria-label="Luigi Leon — Mr. Prosperity">
+          <img src="luigileonlogo.png" alt="Luigi Leon — Mr. Prosperity">
+        </a>
         <div class="footer-tagline">"Mr. Prosperity" — Entrepreneur · Speaker · Visionary</div>
       </div>
       <div class="footer-nav">
@@ -2162,3 +2170,4 @@ button { font-family: inherit; cursor: pointer; }
 </script>
 </body>
 </html>
+
